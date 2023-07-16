@@ -8,7 +8,7 @@ from Punktdiagramm import Punktdiagramm
 from Histogramm import Histogramm
 py.font.init()
 
-#Konstanten und anderer Shit
+#Konstanten
 WIN_WIDTH = 1400
 WIN_HEIGHT = 800
 PLAIN_GAP = 50
@@ -46,7 +46,6 @@ def draw(win, foods, creatures, timer, nearestList, day, reproduced, died, stati
             (foods[nearest[1]].x_+ 0.5 * foods[nearest[1]].width_,
             foods[nearest[1]].y_+ 0.5 * foods[nearest[1]].height_))
         except:
-            #print("fuck it")
             pass
 
     #Text rendern
@@ -104,7 +103,6 @@ def run(creatures, day, reproduced, died, statistics):
 
         #bewegt Kreaturen immer zum nächstgelegenen Essen
         for nearest in nearestList:
-            #hier wurde hart geschummelt:                                               Weil listenindex...
             try:
                 #move1(nearest, creatures, foods)
                 move2(nearest, creatures, foods)
